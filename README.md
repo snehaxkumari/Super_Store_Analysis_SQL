@@ -2,6 +2,7 @@
 Superstore Data Analysis using SQL
 
 WRITE THE FOLLOWING QUERIES FOR:
+
 #1--Find the maximum Qty sold in the transactions
 
 #2--Find the unique products in all the transactions
