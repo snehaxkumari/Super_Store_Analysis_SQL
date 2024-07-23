@@ -32,24 +32,24 @@ limit 5
 
 #6--Find the Top 5 Propertstates that did the maximum sales 
 
-select PropertyID,sum(Quantity) as TotalQTY from tr_orderdetails
-group by PropertyID
-order by 2 desc
-limit 5
+ select PropertyID,sum(Quantity) as TotalQTY from tr_orderdetails
+ group by PropertyID
+ order by 2 desc
+ limit 5
 
 #7 Find the top 5 product names that did maximum sales in terms of quantity
 
-select o.*,p.ProductName,p.ProductCategory,p.Price from tr_orderdetails as o left join tr_products as p
+ select o.*,p.ProductName,p.ProductCategory,p.Price from tr_orderdetails as o left join tr_products as p
  on o.ProductID=p.ProductID
  
-select p.ProductName,SUM(o.Quantity) AS TotalQTY from tr_orderdetails as o left join tr_products as p
+ select p.ProductName,SUM(o.Quantity) AS TotalQTY from tr_orderdetails as o left join tr_products as p
  on o.ProductID=p.ProductID
  GROUP BY p.ProductName
  order by 2
  
  #8 Find the top 5 product names that did maximum sales in terms of sales
  
-select p.ProductName,sum(p.Price *o.Quantity) AS TotalSales from tr_orderdetails as o left join tr_products as p
+ select p.ProductName,sum(p.Price *o.Quantity) AS TotalSales from tr_orderdetails as o left join tr_products as p
  on o.ProductID=p.ProductID
  GROUP BY p.ProductName
  order by TotalSales desc
