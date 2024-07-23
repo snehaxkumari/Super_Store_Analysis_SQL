@@ -72,6 +72,6 @@ select p.ProductName,sum(p.Price *o.Quantity) AS TotalSales from tr_orderdetails
  on o.ProductID=p.ProductID left join tr_propertyinfo as pi on o.PropertyID=pi.`Prop ID`
  where pi.PropertyCity = 'Arlington'
  GROUP BY pi.PropertyCity,p.ProductName
-order by  TotalSales desc
+ order by  TotalSales desc
  
 
