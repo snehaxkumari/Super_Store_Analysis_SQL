@@ -1,7 +1,3 @@
-# SuperStoreData
-Superstore Data Analysis  using SQL
-
-
 #1--Find the maximum Qty sold in the transactions
 
 select max(Quantity),count(*) as totaltransactions from tr_orderdetails
@@ -74,4 +70,5 @@ select p.ProductName,sum(p.Price *o.Quantity) AS TotalSales from tr_orderdetails
  GROUP BY pi.PropertyCity,p.ProductName
 order by  TotalSales desc
  
+
 
