@@ -1,5 +1,5 @@
-# SuperStoreData
-Superstore Data Analysis  using SQL
+
+Superstore Data Analysis using SQL
 
 
 #1--Find the maximum Qty sold in the transactions
