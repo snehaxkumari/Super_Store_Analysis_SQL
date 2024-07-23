@@ -50,6 +50,7 @@ select p.ProductName,SUM(o.Quantity) AS TotalQTY from tr_orderdetails as o left 
  on o.ProductID=p.ProductID
  GROUP BY p.ProductName
  order by 2
+ 
  #8 Find the top 5 product names that did maximum sales in terms of sales
  
 select p.ProductName,sum(p.Price *o.Quantity) AS TotalSales from tr_orderdetails as o left join tr_products as p
